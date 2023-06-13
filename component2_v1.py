@@ -27,11 +27,16 @@ def rules_user():
     elif show_rules == 'yes' or show_rules == 'Yes':
         print('''\n 
                 *** Instructions ***
-    1st: Choose a cupcake flavour with the flavours that we have.
-    2nd: Choose a icing that would like with the flavours that we have.
-    3rd: Choose any toppings that would like to have with the options given''')
+    1. Select how many cupcakes you would like to make.
+    1. Select a cupcake flavour with the flavours that we have.
+    2. Select a icing that you would like with the flavours that we have.
+    3. Select any toppings that you would like to have with the options given.
+    4. We will give you the total price for your cupcakes.
+    \t
+    After that you are good to go to enjoy your cupcakes!
+    ''')
     elif show_rules == 'no' or show_rules == 'No':
-        print("Okay, You may now start with building a cupcake!")
+        print("Okay, You may now start building a cupcake!")
     else:
         print("You must respond with Yes/No!")
         return rules_user()
