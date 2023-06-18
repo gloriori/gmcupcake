@@ -86,7 +86,7 @@ while user_icing.lower() not in icing_options:
 # print out a message when the user chooses
 
 print('You picked: ' + user_icing)
-print("I love that flavour too!")
+print("I love that icing too!")
 
 # set the value for the toppings
 
