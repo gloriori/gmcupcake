@@ -132,3 +132,4 @@ if user_toppings == 'none':
 
 print('You picked: ' + user_toppings)
 print("Great choice!")
+print("I will have", num_cakes, user_flavour, "cupcakes ready just for you!")
