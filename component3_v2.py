@@ -9,10 +9,6 @@ while True:
         print('Please enter a number.')
 
 
-# set the value for the cupcake flavours
-
-num_flavours = num_cakes
-
 # Give the user the cupcake flavours
 
 print("Here are the flavours that we have available!")
@@ -47,10 +43,6 @@ while user_flavour.lower() not in flavour_options:
 
 print('You picked: ' + user_flavour)
 print("What a fantastic choice!")
-
-# set the value for the cupcake icing
-
-num_icing = num_cakes
 
 # Give the user the icings
 
