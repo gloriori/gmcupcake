@@ -32,6 +32,9 @@ def total_toppings_cost():
     return toppings_cost
 
 
+# calculate the final price
+
+
 def total_cupcakes():
     cupcakes_cost = total_flavour_cost() + total_icing_cost() + total_toppings_cost()
     return cupcakes_cost
@@ -39,5 +42,6 @@ def total_cupcakes():
 
 cupcakes_cost = total_cupcakes()
 
+# print the price for the user to see
 
 print(f"The total price of the cupcakes is: ${cupcakes_cost}")
