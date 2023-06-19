@@ -40,4 +40,4 @@ def total_cupcakes():
 cupcakes_cost = total_cupcakes()
 
 
-print(total_cupcakes())
+print(f"The total price of the cupcakes is: ${cupcakes_cost}")
