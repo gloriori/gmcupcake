@@ -68,7 +68,7 @@ rules_user()
 while True:
     try:
         num_cakes = int(input('How many cupcakes would you like to create? '))
-        print("Okay!", num_cakes, "cupcakes coming right up, but first lets choose a cupcake flavour")
+        print("Okay!", num_cakes, "cupcakes coming right up, but first lets choose a cupcake flavour \n ")
         break
     except ValueError:
         print('Please enter a number.')
@@ -76,7 +76,7 @@ while True:
 
 # Give the user the cupcake flavours
 
-print("Here are the flavours that we have available!")
+print("Here are the flavours that we have available! \n")
 
 # make the cupcake flavours into a list
 
@@ -94,20 +94,37 @@ user_flavour = ''
 
 input_message = "Pick the flavour you want!:\n"
 
-# turn the initial list into a numbered list
+while True:
+    user_input = input(
+        'Pick the flavour you want!:\n \n 1) Chocolate \n 2) Vanilla \n 3) Red Velvet \n 4) Carrot \n 5) Strawberry '
+        '\n 6) Lemon \n 7) Confetti \n \n[1/2/3/4/5/6/7]: ')
 
-for index, item in enumerate(flavour_options):
-    input_message += f'{index+1}) {item}\n'
+    if user_input == '1':
+        print('Chocolate, what a fantastic choice!')
+        break
+    elif user_input == '2':
+        print('Vanilla, what a fantastic choice!')
+        break
+    elif user_input == '3':
+        print('Red Velvet, what a fantastic choice!')
+        break
+    elif user_input == '4':
+        print('Carrot, what a fantastic choice!')
+        break
+    elif user_input == '5':
+        print('Strawberry, what a fantastic choice!')
+        break
+    elif user_input == '6':
+        print('Lemon, what a fantastic choice!')
+        break
+    elif user_input == '7':
+        print('Confetti, what a fantastic choice!')
+        break
 
-input_message += 'Your choice: '
+    else:
+        print('Type a number 1-7')
+        continue
 
-while user_flavour.lower() not in flavour_options:
-    user_flavour = input(input_message)
-
-# print out a message when the user chooses
-
-print('You picked: ' + user_flavour)
-print("What a fantastic choice!")
 
 # Give the user the icings
 
