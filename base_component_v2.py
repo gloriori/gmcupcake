@@ -227,7 +227,7 @@ while True:
         'Pick the Topping you want!:\n 1) Rainbow Sprinkles 50c \n '
         '2) Chocolate Sprinkles 50c \n 3) Chocolate Drizzle 50c \n 4) Caramel Drizzle 50c \n '
         '5) Sugar Pearls 50c  \n 6) Cherries 50c \n 7) Strawberries 50c  \n '
-        '8) Marshmallows \n 9) None $0 \n \n[1/2/3/4/5/6/7/8/9]: ')
+        '8) Marshmallows 50c \n 9) None $0 \n \n[1/2/3/4/5/6/7/8/9]: ')
 
 
 # Add individual messages for each input
