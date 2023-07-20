@@ -44,7 +44,8 @@ def rules_user():
         return rules_user()
     elif show_rules == 'yes' or show_rules == 'Yes':
         print('''\n 
-                *** Instructions ***
+                *** Instructions ***         
+                
     1. Select how many cupcakes you would like to make.
     2. Select a cupcake flavour with the flavours that we have.
     3. Select a icing that you would like with the flavours that we have.
@@ -67,7 +68,7 @@ rules_user()
 
 while True:
     try:
-        num_cakes = int(input('How many cupcakes would you like to create? '))
+        num_cakes = int(input('How many cupcakes would you like to create? (Cupcakes are $3.50 Each including frosting) '))
         print("Okay!", num_cakes, "cupcakes coming right up, but first lets choose a cupcake flavour \n ")
         break
     except ValueError:
@@ -94,41 +95,46 @@ user_flavour = ''
 
 input_message = "Pick the flavour you want!:\n"
 
-while True:
-    user_input = input(
-        'Pick the flavour you want!:\n \n 1) Chocolate \n 2) Vanilla \n 3) Red Velvet \n 4) Carrot \n 5) Strawberry '
-        '\n 6) Lemon \n 7) Confetti \n \n[1/2/3/4/5/6/7]: ')
+# let them pick by number
 
-    if user_input == '1':
-        print('Chocolate, what a fantastic choice!')
+while True:
+    flavour_input = input(
+        'Pick the flavour you want!:\n 1) Chocolate $3.50 \n 2) Vanilla $3.50 \n 3) Red Velvet $3.50 \n 4) Carrot $3.50 \n '
+        '5) Strawberry $3.50 \n 6) Lemon $3.50 \n 7) Confetti $3.50 \n \n[1/2/3/4/5/6/7]: ')
+
+# Add individual messages for each input
+
+    if flavour_input == '1':
+        print('You picked: Chocolate\n')
         break
-    elif user_input == '2':
-        print('Vanilla, what a fantastic choice!')
+    elif flavour_input == '2':
+        print('You picked: Vanilla\n')
         break
-    elif user_input == '3':
-        print('Red Velvet, what a fantastic choice!')
+    elif flavour_input == '3':
+        print('You picked: Red Velvet \n')
         break
-    elif user_input == '4':
-        print('Carrot, what a fantastic choice!')
+    elif flavour_input == '4':
+        print('You picked: Carrot \n')
         break
-    elif user_input == '5':
-        print('Strawberry, what a fantastic choice!')
+    elif flavour_input == '5':
+        print('You picked: Strawberry \n')
         break
-    elif user_input == '6':
-        print('Lemon, what a fantastic choice!')
+    elif flavour_input == '6':
+        print('You picked: Lemon \n')
         break
-    elif user_input == '7':
-        print('Confetti, what a fantastic choice!')
+    elif flavour_input == '7':
+        print('You picked: Confetti \n')
         break
 
     else:
         print('Type a number 1-7')
         continue
 
+print("Fantastic choice! \n")
 
 # Give the user the icings
 
-print("Here are the frostings/butter creams we have available")
+print("Here are the frostings/buttercreams we have available (Icing is included in the price of the cupcake flavouring) \n")
 
 # make the icings into a list
 
@@ -147,20 +153,46 @@ user_icing = ''
 
 input_message = "Pick the frostings you want!:\n"
 
-# turn the initial list into a numbered list
+# let them pick by number
 
-for index, item in enumerate(icing_options):
-    input_message += f'{index+1}) {item}\n'
+while True:
+    icing_input = input(
+        'Pick the Frosting you want!:\n 1) Strawberry Frosting \n '
+        '2) Chocolate Frosting \n 3) Cream Cheese Frosting \n 4) Silky Swiss Meringue \n '
+        '5) Whipped Cream Frosting \n 6) Vanilla Buttercream \n 7) Caramel Buttercream \n '
+        '8) Lemon Buttercream \n \n[1/2/3/4/5/6/7/8]: ')
 
-input_message += 'Your choice: '
+# Add individual messages for each input
 
-while user_icing.lower() not in icing_options:
-    user_icing = input(input_message)
+    if icing_input == '1':
+        print('You picked: Strawberry Frosting\n')
+        break
+    elif icing_input == '2':
+        print('You picked: Chocolate Frosting \n')
+        break
+    elif icing_input == '3':
+        print('You picked: Cream Cheese Frosting \n')
+        break
+    elif icing_input == '4':
+        print('You picked: Silky Swiss Meringue\n')
+        break
+    elif icing_input == '5':
+        print('You picked: Whipped Cream Frosting \n')
+        break
+    elif icing_input == '6':
+        print('You picked: Vanilla Buttercream\n')
+        break
+    elif icing_input == '7':
+        print('You picked: Caramel Buttercream\n')
+        break
+    elif icing_input == '8':
+        print('You picked: Lemon Buttercream\n')
+        break
+    else:
+        print('Type a number 1-8')
+        continue
 
-# print out a message when the user chooses
-
-print('You picked: ' + user_icing)
-print("I love that icing too!")
+print("Perfect! \n")
 
 # set the value for the toppings
 
@@ -168,7 +200,7 @@ num_toppings = num_cakes
 
 # Give the user the topping options
 
-print("Here are the toppings we have available")
+print("Here are the toppings we have available (Topping will cost an extra 50c)")
 
 # make the toppings into a list
 
@@ -188,25 +220,55 @@ user_toppings = ''
 input_message = "Pick the toppings you want!:\n"
 
 # turn the initial list into a numbered list
+# let them pick by number
 
-for index, item in enumerate(toppings_options):
-    input_message += f'{index+1}) {item}\n'
+while True:
+    toppings_input = input(
+        'Pick the Topping you want!:\n 1) Rainbow Sprinkles 50c \n '
+        '2) Chocolate Sprinkles 50c \n 3) Chocolate Drizzle 50c \n 4) Caramel Drizzle 50c \n '
+        '5) Sugar Pearls 50c  \n 6) Cherries 50c \n 7) Strawberries 50c  \n '
+        '8) Marshmallows \n 9) None $0 \n \n[1/2/3/4/5/6/7/8/9]: ')
 
-input_message += 'Your choice: '
 
-while user_toppings.lower() not in toppings_options:
-    user_toppings = input(input_message)
+# Add individual messages for each input
 
-# if user chooses none set the number of toppings to 0
+    if toppings_input == '1':
+        print('You picked: Rainbow Sprinkles \n')
+        break
+    elif toppings_input == '2':
+        print('You picked: Chocolate Sprinkles \n')
+        break
+    elif toppings_input == '3':
+        print('You picked: Chocolate Drizzle \n')
+        break
+    elif toppings_input == '4':
+        print('You picked: Caramel Drizzle \n')
+        break
+    elif toppings_input == '5':
+        print('You picked: Sugar Pearls \n')
+        break
+    elif toppings_input == '6':
+        print('You picked: Cherries \n')
+        break
+    elif toppings_input == '7':
+        print('You picked: Strawberries\n')
+        break
+    elif toppings_input == '8':
+        print('You picked: Marshmallows\n')
+        break
+    elif toppings_input == '9':
+        print('You picked: None \n')
+        num_toppings = 0
+        break
+    else:
+        print('Type a number 1-8')
+        continue
 
-if user_toppings == 'none':
-    num_toppings = 0
+
 
 # print out a message when the user chooses
-
-print('You picked: ' + user_toppings)
 print("Great choice!")
-print("I will have", num_cakes, user_flavour, "cupcakes ready just for you!")
+print("I will have", num_cakes, "cupcakes ready just for you!")
 
 # set values for flavours plus toppings
 
@@ -243,5 +305,5 @@ cupcakes_cost = total_cupcakes()
 
 # print the price for the user to see
 
-print(f"The total price of the cupcakes is: ${cupcakes_cost}")
+print(f"The total price of the cupcakes is: \n${cupcakes_cost}")
 print("Thank you for purchasing our cupcakes!")
