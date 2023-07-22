@@ -78,21 +78,6 @@ while True:
 # Give the user the cupcake flavours
 
 print("Here are the flavours that we have available! \n")
-
-# make the cupcake flavours into a list
-
-flavour_options = ['chocolate',
-                   'vanilla',
-                   'red velvet',
-                   'carrot',
-                   'strawberry',
-                   'lemon',
-                   'coffee',
-                   'confetti'
-                   ]
-
-user_flavour = ''
-
 input_message = "Pick the flavour you want!:\n"
 
 # let them pick by number
@@ -135,22 +120,6 @@ print("Fantastic choice! \n")
 # Give the user the icings
 
 print("Here are the frostings/buttercreams we have available (Icing is included in the price of the cupcake flavouring) \n")
-
-# make the icings into a list
-
-icing_options = [
-    'strawberry frosting',
-    'chocolate frosting',
-    'cream cheese frosting',
-    'silky swiss meringue',
-    'whipped cream frosting',
-    'vanilla buttercream',
-    'caramel buttercream',
-    'lemon buttercream'
-]
-
-user_icing = ''
-
 input_message = "Pick the frostings you want!:\n"
 
 # let them pick by number
@@ -201,22 +170,6 @@ num_toppings = num_cakes
 # Give the user the topping options
 
 print("Here are the toppings we have available (Topping will cost an extra 50c)")
-
-# make the toppings into a list
-
-toppings_options = ['rainbow sprinkles',
-                    'chocolate sprinkles',
-                    'chocolate drizzle',
-                    'caramel drizzle',
-                    'sugar pearls',
-                    'cherries',
-                    'strawberries',
-                    'marshmallows',
-                    'none'
-                    ]
-
-user_toppings = ''
-
 input_message = "Pick the toppings you want!:\n"
 
 # turn the initial list into a numbered list
