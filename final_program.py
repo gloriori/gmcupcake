@@ -261,7 +261,7 @@ while True:
         num_toppings = 0
         break
     else:
-        print('Type a number 1-8')
+        print('Type a number 1-9')
         continue
 
 
